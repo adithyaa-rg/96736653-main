@@ -1,0 +1,21 @@
+.nav
+{
+    height: 60px;
+}
+.nav-pills .nav-link
+{
+    border-radius: 0px;
+    height: 60px;
+}
+.nav-link
+{
+    color: #b5d2fe;
+    padding-top: 13px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.nav-item
+{
+    margin-right: 10px;
+}

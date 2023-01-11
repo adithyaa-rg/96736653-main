@@ -1,0 +1,27 @@
+body
+{
+	background-color: black;
+}
+.title_poster
+{
+	width: 100%;
+}
+footer
+{
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    letter-spacing: 3px;
+}
+.movie_list
+{
+    display: flex;
+}
+.card
+{
+    margin: 10px;
+}
+.btn
+{
+    margin: 5px;
+}

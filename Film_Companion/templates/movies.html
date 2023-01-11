@@ -1,0 +1,59 @@
+  {% extends "layout.html" %}
+  {% block title %}
+      {{movie}}
+  {% endblock %}
+  {% block content %}
+    <link href="/static/movies.css" rel="stylesheet">
+    <script type="text/javascript">
+      // Using jQuery.
+
+      $(function() {
+      $('form').each(function() {
+          $('input').keypress(function(e) {
+              // Enter pressed?
+              if(e.which == 10 || e.which == 13) {
+                  this.form.submit();
+              }
+          });
+
+          $('input[type=submit]').hide();
+         });
+      });
+      </script>
+      <div class="Details">
+        <div  class="movie-title">
+            <h1>{{movie}}</h1>
+        </div>
+        <h2 class="cast">Cast</h2>
+            {% for cas in cast%}
+                <a class="cast-name" style="list-style-type:none">{{cas["name"]}}</a><br>
+            {%endfor%}
+        <h2 class="release">Year of Release</h2>
+        <a>{{year[0]["year"]}}</a>
+        <p>{{desc}}</p>
+        <div class="center">
+          <form class="stars" action="/movies" method="post">
+            <input type="radio" id="five" name="rate" value="5">
+            <label for="five"></label>
+            <input type="radio" id="four" name="rate" value="4">
+            <label for="four"></label>
+            <input type="radio" id="three" name="rate" value="3">
+            <label for="three"></label>
+            <input type="radio" id="two" name="rate" value="2">
+            <label for="two"></label>
+            <input type="radio" id="one" name="rate" value="1">
+            <label for="one"></label>
+            <input type="submit" style="visibility: hidden;" />
+          </form>
+          </div>
+       </div>
+      </div>
+
+        <div class="card-deck">
+          <div class="card">
+            <img src="{{poster}}" style="width:100%" class="card-img-top">
+          </div>
+        </div>
+
+
+  {% endblock %}

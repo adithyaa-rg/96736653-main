@@ -1,0 +1,24 @@
+.list-group
+{
+	padding-top: 10px;
+	padding-right: 80px;
+	padding-left: 80px;
+	border-radius: 0px;
+}
+.list-group-item
+{
+	margin-bottom: 35px;
+	border: none;
+	border-radius: 0px;
+	height: 75px;
+	text-align: center;
+	padding-top: 22px;
+	font-weight: bold;
+	letter-spacing: 4px;
+	font-size: 20px;
+
+}
+.remove_bullet
+{
+	list-style: none;
+}

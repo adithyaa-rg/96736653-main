@@ -1,0 +1,1 @@
+select birth as "Birth Year" from people where name="Emma Stone";

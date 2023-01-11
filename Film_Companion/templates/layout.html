@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="/static/mystyles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
+
+
+        <title>Film Companion-{% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+      <header>
+        <div class="topnav">
+          <div class="nav-link-left">
+            <div class="nav-link" href="#home">HOME</div>
+            <div class="nav-link" href="#FILMS">FILMS</div>
+            <div class="nav-link" href="#watchlist" >WATCHLIST</div>
+          </div>
+          <div class="nav-link-center">
+            <!---Logo--><img src="/static/png/logo-no-background.png" style="height: 100%; margin-left: 40%;">
+          </div>
+          <div class="nav-link-right">
+            <img src="/static/search.svg" class="search" style="margin-left: 55%;">
+            <div class="nav-link" >LOGIN</div>
+            <div class="nav-link" >REGISTER</div>
+          </div>
+        </div>
+     </header>
+     <main>
+        {% block content %}{% endblock %}
+     </main>
+    </body>
+</html>

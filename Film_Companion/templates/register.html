@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Mail-ID" type="text">
+            <p id="warning" style="color:red"></a>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+    <script>
+        let input = document.querySelector('#email');
+        input.addEventListener('keyup', function(event) {
+            let term = document.querySelector('#email').value;
+            var re = new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+            if (!re.test(term)){
+                document.querySelector('#warning').innerHTML = "Enter right email ID";
+                document.querySelector('#warning').innerHTML.style.color="red";
+            }
+            else{
+                document.querySelector('#warning').innerHTML = "";
+            }
+        });
+    </script>
+{% endblock %}

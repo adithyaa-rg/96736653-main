@@ -1,0 +1,37 @@
+body
+{
+    background-color: black;
+}
+.heading
+{
+    color: white;
+    text-align: center;
+    font-family: !important;
+    background-image: linear-gradient(#0d6efd, black);
+    height: 750px;
+}
+
+header
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 250px;
+    margin-top: 0px;
+    padding-top: 150px;
+    line-height: 200px;
+    padding-bottom: 75px;
+
+}
+#Tagline
+{
+    font-weight: 300;
+    font-family: revert;
+    letter-spacing: 3px;
+}
+footer
+{
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    letter-spacing: 3px;
+}

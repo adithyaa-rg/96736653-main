@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <div class="question">
+                    <h3>In which direction does the sun rise in?</h3>
+                </div>
+                <div class="options">
+                    <button type="submit" id="b1">East</button>
+                    <button type="submit" id="b2">West</button>
+                    <button type="submit" id="b3">North</button>
+                    <button type="submit" id="b4">South</button>
+                </div>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Earth is _________ in shape</h3>
+                <input type="text" placeholder="Answer" id="Answer_text">
+                <input type="submit" name="Check Answer" value="Check Answer">
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+    <script>
+        /*for(let i=0;i<4;i++)
+        {
+            let value="#b"+num.toString(i);
+            let ans=document.querySelector(value);
+            if (value=="#b1")
+            {
+                ans.addEventListener('click',function(event)
+                {
+                    ans.style.backgroundColor="green";
+                    ans.style.color="white";
+                })
+            }
+            else
+            {
+                ans.addEventListener('click',function(event)
+                {
+                    ans.style.backgroundColor="red";
+                    ans.style.color="white";
+                }
+            }
+        }*/
+        let ans1=document.querySelector("#b1");
+        let ans2=document.querySelector("#b2");
+        let ans3=document.querySelector("#b3");
+        let ans4=document.querySelector("#b4");
+        //alert(ans1);
+
+        ans1.addEventListener('click',function(event)
+            {
+                ans1.style.backgroundColor="green";
+                ans1.style.color='white'
+                ans2.style.backgroundColor="#d9edff";
+                ans2.style.color='black';
+                ans3.style.backgroundColor="#d9edff";
+                ans3.style.color='black';
+                ans4.style.backgroundColor="#d9edff";
+                ans4.style.color='black';
+            });
+        ans2.addEventListener('click',function(event)
+            {
+                ans1.style.backgroundColor="#d9edff";
+                ans1.style.color='black'
+                ans2.style.backgroundColor="red";
+                ans2.style.color='white';
+                ans3.style.backgroundColor="#d9edff";
+                ans3.style.color='black';
+                ans4.style.backgroundColor="#d9edff";
+                ans4.style.color='black';
+            });
+        ans3.addEventListener('click',function(event)
+            {
+                ans1.style.backgroundColor="#d9edff";
+                ans1.style.color='black'
+                ans2.style.backgroundColor="#d9edff";
+                ans2.style.color='black';
+                ans3.style.backgroundColor="red";
+                ans3.style.color='white';
+                ans4.style.backgroundColor="#d9edff";
+                ans4.style.color='black';
+            });
+        ans4.addEventListener('click',function(event)
+            {
+                ans1.style.backgroundColor="#d9edff";
+                ans1.style.color='black'
+                ans2.style.backgroundColor="#d9edff";
+                ans2.style.color='black';
+                ans3.style.backgroundColor="#d9edff";
+                ans3.style.color='black';
+                ans4.style.backgroundColor="red";
+                ans4.style.color='white';
+            });
+
+        let input=document.querySelector('#Answer_text');
+        let answer_button=document.querySelector('input[type="submit"]');
+        answer_button.addEventListener('click',function(event)
+        {
+            let final=input.value;
+            answer_button.style.color='white';
+
+            if (final.toLowerCase()=="spherical")
+            {
+                answer_button.style.backgroundColor="green";
+
+            }
+            else
+            {
+                answer_button.style.backgroundColor="red";
+            }
+        })
+
+    </script>
+</html>

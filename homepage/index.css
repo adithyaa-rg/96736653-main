@@ -1,0 +1,28 @@
+body
+{
+    background-color: black;
+}
+.heading
+{
+    background-image: linear-gradient(#0d6efd, black);
+    margin-top: 0px;
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 100px;
+    height: 100vh;
+}
+.content_box
+{   
+    text-align: center;
+    background-color: white;
+    height: 80vh;
+    padding-top: 50px;
+}
+footer
+{
+    margin: 0px;
+    padding: 10px;
+    color: white;
+    letter-spacing: 3px;
+}

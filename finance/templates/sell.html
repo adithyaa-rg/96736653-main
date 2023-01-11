@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+<link href="/static/mystyles.css" rel="stylesheet">
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+            <select name="symbol" class="btn btn-primary" id="1">
+                {% for stock in stocks %}
+                <option>{{stock["symbol"]}}</option>
+                {% endfor %}
+            </select>
+            <select name="shares" class="btn btn-primary" id="2">
+                {% for i in range(max_shares+1)[1:]%}
+                <option>{{i}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" class="btn btn-primary">
+    </form>
+{% endblock %}

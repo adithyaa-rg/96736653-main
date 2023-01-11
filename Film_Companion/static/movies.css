@@ -1,0 +1,104 @@
+main{
+    display:flex;
+}
+.Details{
+    background-color: #212529;
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+    color:aliceblue;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.movie-title{
+    font-weight: bold;
+    margin-bottom:5%;
+    margin-top:2.5%;
+    font-size:xx-large;
+    letter-spacing: 1.5px
+}
+.cast-name{
+    letter-spacing: 1.5px;
+    margin: 4px;
+}
+h2{
+    font-size: 22px;
+    font-weight:bold;
+}
+.release{
+    margin-top:5%
+}
+.card-deck{
+    margin:10px;
+    margin-left:10px;
+    width:25%;
+    padding:5%;
+    padding-top:0%;
+
+}
+.card-img-top{
+    border-radius:10px;
+    width:80%;
+}
+p{
+    font-size:medium;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+.center .stars{
+  height: 150px;
+  width: 500px;
+  text-align: center;
+}
+.stars input{
+  display: none;
+}
+.stars label{
+  float: right;
+  font-size: 100px;
+  color: lightgrey;
+  margin: 0 5px;
+  text-shadow: 1px 1px #bbb;
+}
+.stars label:before{
+  content: '★';
+}
+.stars input:checked ~ label{
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label{
+  color: gold;
+}
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label{
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.stars .result:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 50%;
+  transform: translateX(-47%);
+  bottom: -30px;
+  font-size: 30px;
+  font-weight: 500;
+  color: gold;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+}
